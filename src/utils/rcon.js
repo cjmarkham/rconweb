@@ -3,10 +3,17 @@ let callbacks = {};
 let index = 1000;
 
 export const on = (event, callback) => {
+  if ( ! isConnected()) {
+    return;
+  }
+
   socket[`on${event}`] = (e) => onMessage(e, callback);
 }
 
 export const off = event => {
+  if ( ! isConnected()) {
+    return;
+  }
   socket[`on${event}`] = null;
 }
 

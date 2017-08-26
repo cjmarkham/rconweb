@@ -41,6 +41,15 @@ class Main extends React.Component {
     });
   }
 
+  disconnect (e) {
+    e.preventDefault();
+    Rcon.disconnect(() => {
+      this.setState({
+        connected: false,
+      })
+    });
+  }
+
   banPlayer (steamID, reason) {
     Rcon.send(`ban ${steamID} "${reason}"`);
   }
@@ -142,6 +151,11 @@ class Main extends React.Component {
                   <Link to={{pathname: '/players'}}>
                     Players
                   </Link>
+                </li>
+                <li>
+                  <a href="#" onClick={ e => this.disconnect(e) }>
+                    Disconnect
+                  </a>
                 </li>
               </ul>
             </div>

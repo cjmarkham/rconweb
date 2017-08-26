@@ -41,6 +41,17 @@ export const connect = (url, password, callback) => {
   socket.addEventListener('message', e => onMessage(e, callback));
 }
 
+export const disconnect = (callback) => {
+  if ( ! isConnected()) {
+    return;
+  }
+
+  socket.addEventListener('close', callback);
+  socket.close();
+  callbacks = {};
+  socket = null;
+}
+
 const onMessage = (e, func) => {
   if ( ! isConnected()) {
     return;

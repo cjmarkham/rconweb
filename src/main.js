@@ -36,7 +36,11 @@ class Main extends React.Component {
       if (event.type === 'error') {
         this.setState({ error: event.error || 'Count not connect to the server', loading: false });
       } else {
-        this.setState({ connected: true });
+        this.setState({
+          connected: true,
+          url: '',
+          password: '',
+        });
       }
     });
   }

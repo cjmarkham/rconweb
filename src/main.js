@@ -112,6 +112,11 @@ class Main extends React.Component {
               </div>
             </div>
           </div>
+          <footer className="text-center">
+            <p className="text-muted">
+              <small>v0.1.7</small>
+            </p>
+          </footer>
         </div>
       );
     }

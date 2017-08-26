@@ -114,7 +114,7 @@ class Main extends React.Component {
           </div>
           <footer className="text-center">
             <p className="text-muted">
-              <small>v0.1.7</small>
+              <small>v0.1.8</small>
             </p>
           </footer>
         </div>

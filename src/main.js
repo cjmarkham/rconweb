@@ -139,7 +139,7 @@ class Main extends React.Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <a className="navbar-brand" href="">CARL</a>
+              <a className="navbar-brand" href="">WEBRCON</a>
             </div>
             <div className="collapse navbar-collapse" id="navbar-collapse">
               <ul className="nav navbar-nav">

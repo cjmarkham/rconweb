@@ -39,5 +39,16 @@
     -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!DOCTYPE html>
+    <script>
+      (function (gi,ve,y) {
+        var js, fjs = gi.getElementsByTagName(ve)[0];
+        if (gi.getElementById(y)) return;
+        js = gi.createElement(ve); js.id = y;
+        js.src = 'sdkv2.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'givey-jssdk'));
+    </script>
+    <div class="givey-charity-widget" data-border="true" data-charity="westbromwichafricancaribbeanresourcecentre"></div>
   </body>
 </html>
